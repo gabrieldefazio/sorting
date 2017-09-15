@@ -17,11 +17,11 @@ const merge = (left, right) =>{
     let merged = [];
     let leftI = 0;
     let rightI = 0;
-    while(leftI < left.length && rightI < right.length){
-        if(left[leftI] < right[rightI]) merged.push(left[leftI++])
+    while(leftI < left.length && rightI < right.length) {
+        if (left[leftI] < right[rightI]) merged.push(left[leftI++])
         else merged.push(right[rightI++])
-        for(; leftI < left.length; leftI++) merged.push(left[leftI++]);
-        for(; rightI < right.length; leftI++) merged.push(right[rightI++]);
-        return merged
     }
+    for(; leftI < left.length; leftI++) merged.push(left[leftI++]);
+    for(; rightI < right.length; leftI++) merged.push(right[rightI++]);
+    return merged
 };
