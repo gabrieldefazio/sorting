@@ -7,7 +7,6 @@ function bubbleSort (array) {
 
         if(array[i] > array[i+1]) {
             [array[i], array[i + 1]] = swap(array[i], array[i + 1]);
-            console.log(array);
             if (flag) flag = false;
         }
     }
